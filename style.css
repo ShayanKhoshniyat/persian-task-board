@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'b titr', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #d0ddf8;
+    padding: 20px;
+    color: #120a3a;
+}
+
+.app {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #120a3a;
+}
+
+.btn {
+    background-color: #1da369;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #0065ff;
+}
+
+#add-column-btn {
+    margin-bottom: 20px;
+}
+
+.columns-container {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.column {
+    background-color: #ebecf0;
+    border-radius: 20px;
+    width: 300px;
+    min-width: 300px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.column-title {
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 4px;
+}
+
+.column-title:hover {
+    background-color: #dfe1e6;
+    border-radius: 3px;
+}
+
+.column-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.column-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5e6c84;
+    font-size: 16px;
+    padding: 4px;
+}
+
+.column-actions button:hover {
+    color: #172b4d;
+}
+
+.cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 10px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+.card:hover {
+    background-color: #f4f5f7;
+}
+
+.card-content {
+    margin-bottom: 8px;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.card-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5e6c84;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.card-actions button:hover {
+    color: #172b4d;
+}
+
+.add-card-btn {
+    background: none;
+    border: none;
+    color: #5e6c84;
+    padding: 8px;
+    text-align: right;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.add-card-btn:hover {
+    background-color: #dfe1e6;
+    color: #172b4d;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 3px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #5e6c84;
+}
+
+.close-btn:hover {
+    color: #172b4d;
+}
+
+#modal-input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #dfe1e6;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Drag and Drop Styles */
+.card.dragging {
+    opacity: 0.5;
+    background-color: #e4f0f6;
+}
+
+.column.drop-target {
+    background-color: #e4f0f6;
+    transition: background-color 0.2s;
+}
